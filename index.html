@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="Aibel Art — the public portfolio of Abel Garcia Medina, geometric abstract and figurative artist from Hialeah, Florida. Paintings, the RIOT.FEVER.ZAPS. print series, and mural work." />
+    <link rel="canonical" href="https://aibelart.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Aibel Art" />
+    <meta property="og:title" content="Aibel Art — Abel Garcia Medina" />
+    <meta property="og:description" content="The public portfolio of Abel Garcia Medina, geometric abstract and figurative artist from Hialeah, Florida. Paintings, the RIOT.FEVER.ZAPS. print series, and mural work." />
+    <meta property="og:url" content="https://aibelart.com/" />
+    <link rel="icon" href="data:," />
+    <title>Aibel Art — Abel Garcia Medina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #fdfdfa;
+        --surface: #ffffff;
+        --ink: #14120f;
+        --ink-soft: #4c463c;
+        --line: #14120f;
+        --accent: #d90452;
+        --accent-ink: #ffffff;
+        --gold: #f2a007;
+        --teal: #0e7c86;
+        --shadow: 8px 8px 0 var(--ink);
+        --shadow-sm: 5px 5px 0 var(--ink);
+        color-scheme: light;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #121110;
+          --surface: #1b1a17;
+          --ink: #f4f1ea;
+          --ink-soft: #b9b2a4;
+          --line: #f4f1ea;
+          --accent: #ff2e74;
+          --accent-ink: #14120f;
+          --gold: #ffb31a;
+          --teal: #2fb3bf;
+          --shadow: 8px 8px 0 rgba(0,0,0,.55);
+          --shadow-sm: 5px 5px 0 rgba(0,0,0,.55);
+          color-scheme: dark;
+        }
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Archivo", system-ui, sans-serif;
+        font-size: 17px;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      img { display: block; max-width: 100%; }
+      a { color: inherit; }
+      .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+
+      /* ---------- Hero ---------- */
+      .hero { padding: 44px 0 10px; }
+      .brand {
+        font-family: "Archivo Black", "Archivo", sans-serif;
+        font-size: clamp(56px, 13vw, 148px);
+        line-height: .92;
+        letter-spacing: -.01em;
+        margin: 0;
+        text-transform: uppercase;
+      }
+      .brand .art { color: var(--accent); }
+      .hero-sub {
+        display: flex; flex-wrap: wrap; gap: 10px 28px; align-items: baseline;
+        margin-top: 18px; padding-top: 16px; border-top: 3px solid var(--line);
+      }
+      .hero-name { font-size: clamp(22px, 4.5vw, 32px); font-weight: 700; }
+      .hero-role { color: var(--ink-soft); font-size: clamp(16px, 3vw, 20px); }
+      .hero-grid {
+        display: grid; gap: 28px; margin-top: 34px;
+        grid-template-columns: 1fr;
+      }
+      @media (min-width: 860px) {
+        .hero-grid { grid-template-columns: 1.05fr .95fr; align-items: start; }
+      }
+      .hero-img {
+        border: 3px solid var(--line); box-shadow: var(--shadow);
+        background: var(--surface);
+      }
+      .hero-img img { width: 100%; height: auto; }
+      .hero-img figcaption {
+        font-family: "IBM Plex Mono", monospace; font-size: 12.5px;
+        padding: 10px 14px; border-top: 3px solid var(--line);
+        color: var(--ink-soft); background: var(--surface);
+      }
+      .hero-copy p { margin: 0 0 18px; font-size: 19px; }
+      .hero-copy p:first-child { font-size: clamp(21px, 3.4vw, 27px); font-weight: 600; line-height: 1.35; }
+      .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }
+      .btn {
+        display: inline-block; text-decoration: none; font-weight: 700;
+        padding: 14px 22px; border: 3px solid var(--line);
+        background: var(--accent); color: var(--accent-ink);
+        box-shadow: var(--shadow-sm); transition: transform .12s ease, box-shadow .12s ease;
+      }
+      .btn.alt { background: var(--surface); color: var(--ink); }
+      .btn:hover { transform: translate(-2px,-2px); box-shadow: 7px 7px 0 var(--ink); }
+      .btn:active { transform: translate(2px,2px); box-shadow: 2px 2px 0 var(--ink); }
+      @media (prefers-color-scheme: dark) {
+        .btn:hover { box-shadow: 7px 7px 0 rgba(0,0,0,.55); }
+        .btn:active { box-shadow: 2px 2px 0 rgba(0,0,0,.55); }
+      }
+      .fact-strip {
+        display: grid; grid-template-columns: repeat(2, 1fr); gap: 0;
+        border: 3px solid var(--line); margin-top: 30px; background: var(--surface);
+      }
+      @media (min-width: 700px) { .fact-strip { grid-template-columns: repeat(4, 1fr); } }
+      .fact { padding: 16px 18px; border-right: 3px solid var(--line); }
+      .fact:last-child { border-right: none; }
+      @media (max-width: 699px) {
+        .fact:nth-child(2) { border-right: none; }
+        .fact:nth-child(1), .fact:nth-child(2) { border-bottom: 3px solid var(--line); }
+      }
+      .fact b { display: block; font-family: "Archivo Black", sans-serif; font-size: 26px; line-height: 1.1; }
+      .fact span { font-family: "IBM Plex Mono", monospace; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); }
+
+      /* ---------- Sections ---------- */
+      section { padding: 64px 0 8px; }
+      .sec-head { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; margin-bottom: 8px; }
+      .sec-head h2 {
+        font-family: "Archivo Black", sans-serif; text-transform: uppercase;
+        font-size: clamp(32px, 6vw, 52px); margin: 0; line-height: 1;
+      }
+      .sec-head .tag {
+        font-family: "IBM Plex Mono", monospace; font-size: 13px;
+        border: 2px solid var(--line); padding: 4px 10px; background: var(--gold); color: #14120f;
+      }
+      .sec-lede { max-width: 68ch; color: var(--ink-soft); font-size: 18px; margin: 10px 0 30px; }
+      .sec-lede strong { color: var(--ink); }
+
+      /* ---------- Gallery ---------- */
+      .gallery { display: grid; gap: 22px; grid-template-columns: repeat(2, 1fr); align-items: start; }
+      @media (min-width: 760px) { .gallery { grid-template-columns: repeat(3, 1fr); } }
+      @media (max-width: 460px) { .gallery { grid-template-columns: 1fr; } }
+      .work {
+        border: 3px solid var(--line); background: var(--surface);
+        padding: 0; cursor: pointer; text-align: left; font: inherit; color: inherit;
+        transition: transform .12s ease, box-shadow .12s ease;
+      }
+      .work:hover { transform: translate(-3px,-3px); box-shadow: var(--shadow-sm); }
+      .work .frame { overflow: hidden; background: #fff; }
+      .work .frame img { width: 100%; height: auto; }
+      .work .meta { padding: 12px 14px 14px; border-top: 3px solid var(--line); }
+      .work .meta b { display: block; font-size: 16.5px; line-height: 1.3; }
+      .work .meta span { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: .05em; }
+
+      /* ---------- Prints ---------- */
+      .prints-grid { display: grid; gap: 28px; grid-template-columns: 1fr; }
+      @media (min-width: 860px) { .prints-grid { grid-template-columns: 1.1fr .9fr; align-items: start; } }
+      .prints-img { border: 3px solid var(--line); box-shadow: var(--shadow); background: var(--surface); }
+      .prints-img img { width: 100%; height: auto; }
+      .prints-img figcaption {
+        font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--ink-soft);
+        padding: 10px 14px; border-top: 3px solid var(--line); background: var(--surface);
+      }
+      .price-table { border: 3px solid var(--line); background: var(--surface); }
+      .price-row {
+        display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+        padding: 16px 18px; border-bottom: 3px solid var(--line);
+      }
+      .price-row:last-child { border-bottom: none; }
+      .price-row .size b { display: block; font-size: 19px; }
+      .price-row .size span { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--ink-soft); }
+      .price-row .amt { font-family: "Archivo Black", sans-serif; font-size: 30px; }
+      .order-notes { margin-top: 20px; }
+      .order-notes p { margin: 0 0 12px; }
+      .pay-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+      .pay-chip {
+        font-family: "IBM Plex Mono", monospace; font-size: 14px;
+        border: 2px solid var(--line); padding: 8px 12px; background: var(--surface);
+      }
+
+      /* ---------- About / murals ---------- */
+      .two-col { display: grid; gap: 28px; grid-template-columns: 1fr; }
+      @media (min-width: 860px) { .two-col { grid-template-columns: .95fr 1.05fr; align-items: start; } }
+      .prose p { margin: 0 0 16px; font-size: 18px; }
+      .prose p:first-child { font-size: 21px; font-weight: 600; line-height: 1.4; }
+      .side-img { border: 3px solid var(--line); box-shadow: var(--shadow); background: var(--surface); }
+      .side-img img { width: 100%; height: auto; }
+      .side-img figcaption {
+        font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--ink-soft);
+        padding: 10px 14px; border-top: 3px solid var(--line); background: var(--surface);
+      }
+      .note-box {
+        border: 3px solid var(--line); background: var(--surface);
+        padding: 20px 22px; margin-top: 24px; box-shadow: var(--shadow-sm);
+      }
+      .note-box h3 { margin: 0 0 8px; font-size: 19px; }
+      .note-box p { margin: 0 0 10px; }
+      .note-box p:last-child { margin-bottom: 0; }
+
+      /* ---------- Contact ---------- */
+      .contact {
+        margin: 70px 0 60px; border: 3px solid var(--line);
+        background: var(--ink); color: var(--bg); padding: 34px 26px;
+      }
+      .contact h2 {
+        font-family: "Archivo Black", sans-serif; text-transform: uppercase;
+        font-size: clamp(30px, 6vw, 48px); margin: 0 0 8px; line-height: 1.05;
+      }
+      .contact p { max-width: 60ch; margin: 0 0 22px; opacity: .85; }
+      .contact-links { display: flex; flex-wrap: wrap; gap: 12px; }
+      .contact-links a {
+        text-decoration: none; font-weight: 700; padding: 12px 18px;
+        border: 3px solid var(--bg); color: var(--bg);
+      }
+      .contact-links a.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+      @media (prefers-color-scheme: dark) { .contact-links a.primary { color: #14120f; } }
+      .contact-links a:hover { background: var(--gold); border-color: var(--gold); color: #14120f; }
+      footer {
+        padding: 0 0 40px; font-family: "IBM Plex Mono", monospace; font-size: 12.5px;
+        color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: 6px 24px; justify-content: space-between;
+      }
+
+      /* ---------- Lightbox ---------- */
+      .lightbox {
+        position: fixed; inset: 0; z-index: 50; display: none;
+        background: rgba(10, 9, 8, .94); color: #f4f1ea;
+        flex-direction: column;
+      }
+      .lightbox.open { display: flex; }
+      .lb-bar {
+        display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        padding: 14px 16px; font-family: "IBM Plex Mono", monospace; font-size: 13px;
+      }
+      .lb-stage { flex: 1; display: flex; align-items: center; justify-content: center; padding: 0 12px; min-height: 0; }
+      .lb-stage img { max-width: 100%; max-height: 100%; object-fit: contain; border: 3px solid #f4f1ea; background: #fff; }
+      .lb-cap { padding: 14px 18px 6px; text-align: center; }
+      .lb-cap b { display: block; font-size: 19px; }
+      .lb-cap span { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; opacity: .75; text-transform: uppercase; letter-spacing: .05em; }
+      .lb-nav { display: flex; justify-content: center; gap: 12px; padding: 12px 0 22px; }
+      .lb-btn {
+        font: inherit; font-weight: 700; cursor: pointer;
+        background: transparent; color: #f4f1ea; border: 2px solid #f4f1ea; padding: 10px 18px;
+      }
+      .lb-btn:hover { background: var(--accent); border-color: var(--accent); }
+      .lb-close { font-size: 15px; }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .btn, .work, .lb-btn { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+
+      <!-- ============ HERO ============ -->
+      <header class="hero">
+        <h1 class="brand">Aibel <span class="art">Art</span></h1>
+        <div class="hero-sub">
+          <span class="hero-name">Abel Garcia Medina</span>
+          <span class="hero-role">Geometric abstract &amp; figurative artist — Hialeah, Florida</span>
+        </div>
+
+        <div class="hero-grid">
+          <figure class="hero-img" style="margin:0">
+            <img src="img01.jpg" alt="Framed painting by Abel Garcia Medina: a geometric figure in red, blue and green with thick black outlines, a parrot's head with a yellow beak at its shoulder and a coffee cup below, on a speckled ground" width="1170" height="1475" />
+            <figcaption>The figure and the parrot — acrylic on canvas, framed, signed Abel.</figcaption>
+          </figure>
+          <div class="hero-copy">
+            <p>Bold geometry. Thick black line. Color that doesn't whisper.</p>
+            <p>Abel Garcia Medina builds faces, figures and whole worlds out of pure shape — cubist-inspired paintings and digital works where every facet is placed by hand and every piece is signed <strong>Abel</strong>.</p>
+            <p>Born in Arroyo Arenas, Havana, and raised in Hialeah since 1995, he has made some 2,000 works in four years — paintings, portraits, and the geometric print series <strong>RIOT.FEVER.ZAPS.</strong> His next goal is the biggest canvas of all — a city wall. He is preparing work for the public art program on Miami's NW 7th Avenue corridor.</p>
+            <div class="cta-row">
+              <a class="btn" href="#work">See the work</a>
+              <a class="btn alt" href="https://www.instagram.com/agm1_art" target="_blank" rel="noopener">@agm1_art on Instagram</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="fact-strip" aria-label="Artist facts">
+          <div class="fact"><b>~2,000</b><span>Works created</span></div>
+          <div class="fact"><b>Top 10</b><span>In his group — The People's Artist, 2026</span></div>
+          <div class="fact"><b>1995</b><span>Arrived in Miami from Havana</span></div>
+          <div class="fact"><b>2026–29</b><span>Uptown CRA public art plan, NW 7th Ave</span></div>
+        </div>
+      </header>
+
+      <!-- ============ SELECTED WORK ============ -->
+      <section id="work">
+        <div class="sec-head">
+          <h2>Selected Work</h2>
+          <span class="tag">Tap any piece to view it full-size</span>
+        </div>
+        <p class="sec-lede">The pieces Abel picked himself: acrylic paintings on canvas — roses, parrots, faces split into facets, hands, drip and splatter work — plus the studio and room shots that show the work where it lives. The drip, the outline and the color blocks are the signature, and every piece is signed <strong>Abel</strong>.</p>
+
+        <div class="gallery" id="gallery">
+          <button class="work" type="button" data-full="img02.jpg" data-title="Bouquet of Red Roses" data-medium="Acrylic on canvas">
+            <span class="frame"><img src="img02.jpg" alt="A bouquet of ten red roses with green leaves in a pale vase, painted in bold blocks of color with thick black outlines and one long red drip" loading="lazy" /></span>
+            <span class="meta"><b>Bouquet of Red Roses</b><span>Acrylic on canvas</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img03.jpg" data-title="Profile Face" data-medium="Acrylic on canvas">
+            <span class="frame"><img src="img03.jpg" alt="A painted face in profile, built from bold shapes of color and strong outlines" loading="lazy" /></span>
+            <span class="meta"><b>Profile Face</b><span>Acrylic on canvas</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img04.jpg" data-title="Face with Sunglasses" data-medium="Acrylic on canvas">
+            <span class="frame"><img src="img04.jpg" alt="A woman's face built from bold blocks of red, blue and yellow with thick black outlines, wearing oversized sunglasses, neon pink and green splatter streaking across the canvas" loading="lazy" /></span>
+            <span class="meta"><b>Face with Sunglasses</b><span>Acrylic on canvas</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img05.jpg" data-title="Red Rose" data-medium="Acrylic on canvas">
+            <span class="frame"><img src="img05.jpg" alt="A large red rose built from curved geometric petals, set in blocks of royal blue, green and yellow with thick black outlines" loading="lazy" /></span>
+            <span class="meta"><b>Red Rose</b><span>Acrylic on canvas</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img06.jpg" data-title="Guitarist — Version A" data-medium="Acrylic on canvas">
+            <span class="frame"><img src="img06.jpg" alt="A guitarist in a hat, painted in swirling strokes of blue and teal against a splattered white ground, mid-performance" loading="lazy" /></span>
+            <span class="meta"><b>Guitarist — Version A</b><span>Acrylic on canvas</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img07.jpg" data-title="Gold Leaf, On the Wall" data-medium="Acrylic on canvas">
+            <span class="frame"><img src="img07.jpg" alt="A large abstract canvas hanging on a white wall: marbled green paint ringed with patches of gold leaf over a ground of layered drips and splatters" loading="lazy" /></span>
+            <span class="meta"><b>Gold Leaf, On the Wall</b><span>Acrylic on canvas</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img08.jpg" data-title="Black Butterfly" data-medium="Acrylic on canvas">
+            <span class="frame"><img src="img08.jpg" alt="A black butterfly with pale markings at the center of a canvas flooded with dripping red, gold, blue and green paint" loading="lazy" /></span>
+            <span class="meta"><b>Black Butterfly</b><span>Acrylic on canvas</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img09.jpg" data-title="Green Parrot" data-medium="Acrylic on canvas">
+            <span class="frame"><img src="img09.jpg" alt="A green parrot perched on a branch among leaves and clusters of red berries, the background split into stained-glass blocks of blue, yellow and red with thick black outlines" loading="lazy" /></span>
+            <span class="meta"><b>Green Parrot</b><span>Acrylic on canvas</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img10.jpg" data-title="Gold and Rose" data-medium="Acrylic on canvas">
+            <span class="frame"><img src="img10.jpg" alt="An abstract painting with a swirling rose form in gold, amber and crimson over a dark, heavily worked ground" loading="lazy" /></span>
+            <span class="meta"><b>Gold and Rose</b><span>Acrylic on canvas</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img11.jpg" data-title="Hand and Heart" data-medium="Acrylic on canvas">
+            <span class="frame"><img src="img11.jpg" alt="A hand holding a red heart beneath a hanging lightbulb, the fingers streaked with red paint and splatter" loading="lazy" /></span>
+            <span class="meta"><b>Hand and Heart</b><span>Acrylic on canvas</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img12.jpg" data-title="The Hand" data-medium="Acrylic on canvas">
+            <span class="frame"><img src="img12.jpg" alt="A painted hand against a black ground, its fingers built from patches of green, white, red and gold, paint dripping from the fingertips" loading="lazy" /></span>
+            <span class="meta"><b>The Hand</b><span>Acrylic on canvas</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img13.jpg" data-title="Pink Drip Figure" data-medium="Acrylic on canvas">
+            <span class="frame"><img src="img13.jpg" alt="A large canvas of a reclining figure covered in dripping hot pink paint, under a web of thrown black, yellow and white lines" loading="lazy" /></span>
+            <span class="meta"><b>Pink Drip Figure</b><span>Acrylic on canvas</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img14.jpg" data-title="Abstract Face" data-medium="Acrylic on canvas — framed">
+            <span class="frame"><img src="img14.jpg" alt="A framed abstract painting: a face built from bold blocks of red, blue, green and pink with thick black outlines" loading="lazy" /></span>
+            <span class="meta"><b>Abstract Face</b><span>Acrylic on canvas — framed</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img15.jpg" data-title="Grid Face" data-medium="Acrylic on canvas — framed">
+            <span class="frame"><img src="img15.jpg" alt="A framed painting of a face emerging from a dense grid of black lines over washes of red, ochre and white paint" loading="lazy" /></span>
+            <span class="meta"><b>Grid Face</b><span>Acrylic on canvas — framed</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img16.jpg" data-title="Neon Couple" data-medium="Acrylic on canvas">
+            <span class="frame"><img src="img16.jpg" alt="Two figures outlined in neon green and hot pink over a chaotic field of orange, yellow and blue splatter, shown mounted on a white wall" loading="lazy" /></span>
+            <span class="meta"><b>Neon Couple</b><span>Acrylic on canvas</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img17.jpg" data-title="Circular Scribble" data-medium="Acrylic on canvas">
+            <span class="frame"><img src="img17.jpg" alt="A circular scribble of black lines swirling over a dense field of drips and splatters in yellow, orange and grey" loading="lazy" /></span>
+            <span class="meta"><b>Circular Scribble</b><span>Acrylic on canvas</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img18.jpg" data-title="Torso, Impasto" data-medium="Acrylic on canvas">
+            <span class="frame"><img src="img18.jpg" alt="A muscular torso built from thick, swirling impasto in black, grey and green, lit with small flames of orange and red paint" loading="lazy" /></span>
+            <span class="meta"><b>Torso, Impasto</b><span>Acrylic on canvas</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img19.jpg" data-title="Guitarist — Version B" data-medium="Acrylic on canvas">
+            <span class="frame"><img src="img19.jpg" alt="A second version of the guitarist: a figure in a hat playing guitar, built from swirling blue and teal strokes on a splattered ground" loading="lazy" /></span>
+            <span class="meta"><b>Guitarist — Version B</b><span>Acrylic on canvas</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img20.jpg" data-title="Splatter Trio" data-medium="Acrylic on canvas">
+            <span class="frame"><img src="img20.jpg" alt="Three splatter paintings in pink, black and white, shown side by side" loading="lazy" /></span>
+            <span class="meta"><b>Splatter Trio</b><span>Acrylic on canvas</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img21.jpg" data-title="Splatter Canvas, In the Studio" data-medium="Studio photograph">
+            <span class="frame"><img src="img21.jpg" alt="A large splatter canvas in the studio, covered in thrown and dripped paint" loading="lazy" /></span>
+            <span class="meta"><b>Splatter Canvas, In the Studio</b><span>Studio photograph</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img22.jpg" data-title="Parrot, Framed" data-medium="Acrylic on canvas — shown framed">
+            <span class="frame"><img src="img22.jpg" alt="The green parrot painting in a frame, hanging in a room" loading="lazy" /></span>
+            <span class="meta"><b>Parrot, Framed</b><span>Acrylic on canvas — shown framed</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img23.jpg" data-title="Neon Couple, In a Room" data-medium="Acrylic on canvas — shown in situ">
+            <span class="frame"><img src="img23.jpg" alt="Two figures outlined in neon green and hot pink over a field of orange, yellow and blue splatter, the canvas hanging on a white wall above a white couch" loading="lazy" /></span>
+            <span class="meta"><b>Neon Couple, In a Room</b><span>Acrylic on canvas — shown in situ</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img24.jpg" data-title="Meditating Figure, In a Room" data-medium="Acrylic on canvas — shown in situ">
+            <span class="frame"><img src="img24.jpg" alt="A framed painting of a seated meditating figure with a yellow oval head, built from curving bands of blue, yellow and red, hanging on a black wall between two armchairs" loading="lazy" /></span>
+            <span class="meta"><b>Meditating Figure, In a Room</b><span>Acrylic on canvas — shown in situ</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img25.jpg" data-title="Black, Yellow and White Drip, In a Room" data-medium="Acrylic on canvas — shown in situ">
+            <span class="frame"><img src="img25.jpg" alt="A large drip painting in black, yellow and white hanging on a concrete wall above a grey couch in a loft room" loading="lazy" /></span>
+            <span class="meta"><b>Black, Yellow and White Drip, In a Room</b><span>Acrylic on canvas — shown in situ</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img26.jpg" data-title="Blue Splatter, In a Room" data-medium="Acrylic on canvas — shown in situ">
+            <span class="frame"><img src="img26.jpg" alt="A framed splatter painting in turquoise, blue and black with a burst of pink and yellow, hanging on a dark tiled wall above a freestanding white bathtub" loading="lazy" /></span>
+            <span class="meta"><b>Blue Splatter, In a Room</b><span>Acrylic on canvas — shown in situ</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img27.jpg" data-title="In the Studio — Torso and Totem" data-medium="Studio photograph">
+            <span class="frame"><img src="img27.jpg" alt="The artist's studio: a large splatter-painted torso canvas and a tall black totem panel on an easel, paintings covering the walls behind" loading="lazy" /></span>
+            <span class="meta"><b>In the Studio — Torso and Totem</b><span>Studio photograph</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img28.jpg" data-title="In the Studio — Room of Paintings" data-medium="Studio photograph">
+            <span class="frame"><img src="img28.jpg" alt="A studio room filled with paintings — canvases on the walls and leaning around a couch" loading="lazy" /></span>
+            <span class="meta"><b>In the Studio — Room of Paintings</b><span>Studio photograph</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img29.jpg" data-title="In the Studio — Floor and Boards" data-medium="Studio photograph">
+            <span class="frame"><img src="img29.jpg" alt="Paintings and painted skateboard decks spread across the studio floor" loading="lazy" /></span>
+            <span class="meta"><b>In the Studio — Floor and Boards</b><span>Studio photograph</span></span>
+          </button>
+
+          <button class="work" type="button" data-full="img17.jpg" data-title="The Big Scribble" data-medium="Acrylic on canvas">
+            <span class="frame"><img src="img17.jpg" alt="A large abstract painting covered edge to edge in swirling black scribble lines over dense layers of dripped and splattered paint in yellow, orange, blue and grey" loading="lazy" /></span>
+            <span class="meta"><b>The Big Scribble</b><span>Acrylic on canvas</span></span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ============ PRINTS ============ -->
+      <section id="prints">
+        <div class="sec-head">
+          <h2>RIOT.FEVER.ZAPS.</h2>
+          <span class="tag">Canvas prints — ready to hang</span>
+        </div>
+        <p class="sec-lede">The geometric print series, produced as canvas prints that arrive <strong>ready to hang</strong> and ship straight to the buyer. Eight designs, three sizes, one signature.</p>
+
+        <div class="prints-grid">
+          <figure class="prints-img" style="margin:0">
+            <img src="img30.jpg" alt="All eight RIOT.FEVER.ZAPS. designs shown as framed prints arranged in two rows of four on a gallery wall" width="1800" height="1013" loading="lazy" />
+            <figcaption>The full series of eight, framed.</figcaption>
+          </figure>
+          <div>
+            <div class="price-table" role="table" aria-label="Print prices">
+              <div class="price-row" role="row">
+                <div class="size"><b>Small</b><span>approx. 16″ × 28″</span></div>
+                <div class="amt">$55</div>
+              </div>
+              <div class="price-row" role="row">
+                <div class="size"><b>Medium</b><span>approx. 20″ × 36″</span></div>
+                <div class="amt">$80</div>
+              </div>
+              <div class="price-row" role="row">
+                <div class="size"><b>Large</b><span>approx. 28″ × 48″</span></div>
+                <div class="amt">$115</div>
+              </div>
+            </div>
+            <div class="order-notes">
+              <p><strong>To order:</strong> send a DM on Instagram to <a href="https://www.instagram.com/agm1_art" target="_blank" rel="noopener"><strong>@agm1_art</strong></a> with the design and size. Payment by Cash App or PayPal:</p>
+              <div class="pay-row">
+                <span class="pay-chip">Cash App&nbsp; $abelagm1</span>
+                <span class="pay-chip">PayPal&nbsp; @abelGarcia118</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section id="about">
+        <div class="sec-head">
+          <h2>The Artist</h2>
+        </div>
+        <div class="two-col">
+          <div class="prose">
+            <p>Abel Garcia Medina was born in Arroyo Arenas, Havana, Cuba, and landed at Miami International Airport with his family on July 30, 1995. He grew up in Hialeah — and Hialeah is still home, still the studio, still the subject.</p>
+            <p>He came to art in 2022 and hasn't stopped: roughly 2,000 works in four years — paintings, portraits, digital geometry — each one signed, and each one built the same way, from bold shapes, saturated color and a heavy black line that holds it all together.</p>
+            <p>In 2026 his geometric work placed <strong>10th in his group in The People's Artist</strong>, a national art contest. His pieces have also grown past the canvas: his characters Bleepy &amp; Blipon anchor <em>MisterFu Stories</em>, a children's story and coloring project built from his geometric pieces.</p>
+            <p>The ambition is simple and he says it plainly: make the work big enough, and honest enough, that it outlives him — so his son Jay can point at it one day and say, <em>that was my father.</em></p>
+          </div>
+          <figure class="side-img" style="margin:0">
+            <img src="img27.jpg" alt="The artist's studio in Hialeah: a large splatter-painted torso canvas and a tall black totem panel on an easel, with more paintings covering the walls behind" loading="lazy" />
+            <figcaption>The studio in Hialeah — the work already stands taller than the artist.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============ MURALS ============ -->
+      <section id="murals">
+        <div class="sec-head">
+          <h2>Next: The Walls</h2>
+          <span class="tag">Public art — North Miami</span>
+        </div>
+        <div class="two-col">
+          <figure class="side-img" style="margin:0">
+            <img src="img15.jpg" alt="A framed painting by Abel Garcia Medina of a face emerging from a dense grid of black lines over washes of red, ochre and white — the grid structure he scales up for walls" loading="lazy" />
+            <figcaption>The grid method — old school, square by square, no projector.</figcaption>
+          </figure>
+          <div class="prose">
+            <p>The City of North Miami's Uptown CRA has approved its <strong>Public Art Implementation Plan 2026–2029</strong> for the NW 7th Avenue corridor — and Abel's art is in the conversation for its walls.</p>
+            <p>The plan runs on two themes, <strong>Heritage</strong> and <strong>Innovation</strong>, for a corridor envisioned as Miami-Dade County's premier African American and Caribbean cultural corridor. That's Abel's story in two words: a kid from Arroyo Arenas, raised in Hialeah, building a new visual language out of pure geometry.</p>
+            <p>He scales his work the old-school way — the <strong>grid method</strong>, transferring a design square by square from paper to wall, the same grid structure the face at left is built on. Murals, commissions and the CRA's pre-qualified artist recruitment are the next step.</p>
+            <div class="note-box">
+              <h3>Commissions &amp; public art inquiries</h3>
+              <p>For mural commissions, public art calls, or portfolio requests, reach out directly:</p>
+              <p><a href="mailto:State.of.abel.art@gmail.com"><strong>State.of.abel.art@gmail.com</strong></a> · <a href="tel:+13056767873"><strong>305-676-7873</strong></a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <div class="contact" id="contact">
+        <h2>Own a piece. Book a wall.</h2>
+        <p>Originals, RIOT.FEVER.ZAPS. canvas prints, and mural commissions — everything starts with a message.</p>
+        <div class="contact-links">
+          <a class="primary" href="https://www.instagram.com/agm1_art" target="_blank" rel="noopener">Instagram — @agm1_art</a>
+          <a href="mailto:State.of.abel.art@gmail.com">State.of.abel.art@gmail.com</a>
+          <a href="tel:+13056767873">305-676-7873</a>
+        </div>
+      </div>
+
+      <footer>
+        <span>AIBEL ART — Abel Garcia Medina · Hialeah, Florida</span>
+        <span><a href="https://aibelart.com/">aibelart.com</a></span>
+        <span>Every piece signed “Abel”</span>
+      </footer>
+    </main>
+
+    <!-- ============ LIGHTBOX ============ -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Artwork viewer">
+      <div class="lb-bar">
+        <span id="lbCount"></span>
+        <button class="lb-btn lb-close" type="button" id="lbClose" aria-label="Close viewer">Close ✕</button>
+      </div>
+      <div class="lb-stage"><img id="lbImg" alt="" /></div>
+      <div class="lb-cap"><b id="lbTitle"></b><span id="lbMedium"></span></div>
+      <div class="lb-nav">
+        <button class="lb-btn" type="button" id="lbPrev">← Prev</button>
+        <button class="lb-btn" type="button" id="lbNext">Next →</button>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var works = Array.prototype.slice.call(document.querySelectorAll('.work'));
+        var lb = document.getElementById('lightbox');
+        var lbImg = document.getElementById('lbImg');
+        var lbTitle = document.getElementById('lbTitle');
+        var lbMedium = document.getElementById('lbMedium');
+        var lbCount = document.getElementById('lbCount');
+        var current = 0;
+        var lastFocus = null;
+
+        function show(i) {
+          current = (i + works.length) % works.length;
+          var w = works[current];
+          var img = w.querySelector('img');
+          lbImg.src = w.getAttribute('data-full');
+          lbImg.alt = img ? img.alt : '';
+          lbTitle.textContent = w.getAttribute('data-title');
+          lbMedium.textContent = w.getAttribute('data-medium');
+          lbCount.textContent = (current + 1) + ' / ' + works.length;
+        }
+        function open(i) {
+          lastFocus = document.activeElement;
+          show(i);
+          lb.classList.add('open');
+          document.body.style.overflow = 'hidden';
+          document.getElementById('lbClose').focus();
+        }
+        function close() {
+          lb.classList.remove('open');
+          document.body.style.overflow = '';
+          if (lastFocus) lastFocus.focus();
+        }
+        works.forEach(function (w, i) {
+          w.addEventListener('click', function () { open(i); });
+        });
+        document.getElementById('lbClose').addEventListener('click', close);
+        document.getElementById('lbPrev').addEventListener('click', function () { show(current - 1); });
+        document.getElementById('lbNext').addEventListener('click', function () { show(current + 1); });
+        lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+        document.addEventListener('keydown', function (e) {
+          if (!lb.classList.contains('open')) return;
+          if (e.key === 'Escape') close();
+          if (e.key === 'ArrowLeft') show(current - 1);
+          if (e.key === 'ArrowRight') show(current + 1);
+        });
+      })();
+    </script>
+  </body>
+</html>
